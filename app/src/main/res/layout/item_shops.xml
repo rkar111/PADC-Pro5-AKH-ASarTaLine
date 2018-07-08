@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium"
+    app:cardElevation="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_shop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/shop_image_size"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bbq_steak" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_shop"
+            android:layout_margin="@dimen/margin_medium"
+            android:text="@string/steak_house"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_heading_1x" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_township"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/tv_shop_name"
+            android:layout_below="@id/tv_shop_name"
+            android:text="@string/township"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_shop_address_township"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_township"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_toEndOf="@id/tv_township"
+            android:text="@string/yangon"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/tv_township"
+            android:layout_below="@id/tv_township"
+            android:text="@string/address"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular_2x" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tv_shop_address_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/tv_address"
+            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_toEndOf="@id/tv_address"
+            android:text="@string/yangon"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular_2x" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

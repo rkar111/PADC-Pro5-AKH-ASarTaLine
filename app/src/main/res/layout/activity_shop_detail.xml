@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_shop_detail"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bbq_steak" />
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_shop_detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_shop_detail"
+        android:layout_margin="@dimen/margin_medium"
+        android:text="@string/steak_house"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_heading_1x" />
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_shop_detail_township"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_shop_detail_name"
+        android:layout_below="@id/tv_shop_detail_name"
+        android:text="@string/township"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_shop_detail_address_township"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_shop_detail_township"
+        android:layout_marginBottom="@dimen/margin_medium_3"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_toEndOf="@id/tv_shop_detail_township"
+        android:text="@string/yangon"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_shop_detail_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/tv_shop_detail_township"
+        android:layout_below="@id/tv_shop_detail_township"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/address"
+        android:textColor="@color/secondary_text"
+        android:textSize="@dimen/text_regular_2x" />
+
+    <org.mmtextview.components.MMTextView
+        android:id="@+id/tv_shop_detail_address_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_shop_detail_address"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_toEndOf="@id/tv_shop_detail_address"
+        android:text="@string/yangon"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/text_regular_2x" />
+</RelativeLayout>

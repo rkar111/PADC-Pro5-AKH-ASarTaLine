@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.ShopListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!--<android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/collapsing_toolbar_height"
+            app:contentScrim="@color/primary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:statusBarScrim="@color/primary">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bbq_steak"
+                android:tint="#6F000000" />
+
+
+
+        </android.support.design.widget.CollapsingToolbarLayout>-->
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_collapseMode="pin" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<EditText
+        android:id="@+id/et_search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_medium_3"
+        android:layout_marginRight="@dimen/margin_medium_3"
+        android:background="@drawable/rounded"
+        android:drawablePadding="8dp"
+        android:drawableStart="@drawable/ic_search_grey_24dp"
+        android:focusable="auto"
+        android:hint="@string/search"
+        android:padding="12dp"
+        android:textColorHint="@color/secondary_text"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|center_horizontal" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activities.ShopListActivity"
+        tools:showIn="@layout/activity_shop_list">
+
+        <xyz.arkarhein.asartaline.components.SmartRecyclerView
+            android:id="@+id/rv_shop_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </xyz.arkarhein.asartaline.components.SmartRecyclerView>
+
+        <include
+            android:id="@+id/vp_empty_news"
+            layout="@layout/view_pod_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
